@@ -22,6 +22,6 @@ console.log(e_full_name)
 let e_fun_thing = 'I love art'
 
 //Favourite programming language
-let fav_prog_lang = 'C'
+let fav_prog_lang = 'C language' 
 
 console.log(`My name is ${emmanuels_name} ${emmanuels_surname}, a fun thing about me is that ${e_fun_thing}, and my favourite programming language is ${fav_prog_lang}.`)
