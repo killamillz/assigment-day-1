@@ -11,10 +11,10 @@
 // Esther
 
 // Emmanuel Njoku
-let pauls_name = "Paul";
-let pauls_surname = "Bassey";
+let paul = "Paul";
+let bassey = "Bassey";
 
-p_full_name = `${pauls_name} ${pauls_surname}`;
+p_full_name = `${paul} ${bassey}`;
 console.log(p_full_name);
 
 let p_fun_thing = "I love FC26";
@@ -23,5 +23,5 @@ let p_fun_thing = "I love FC26";
 let fav_prog_lang = "Golang";
 
 console.log(
-  `My name is ${pauls_name} ${pauls_surname}, a fun thing about me is that ${p_fun_thing}, and my favourite programming language is ${fav_prog_lang}.`,
+  `My name is ${paul} ${bassey}, a fun thing about me is that ${p_fun_thing}, and my favourite programming language is ${fav_prog_lang}.`,
 );
