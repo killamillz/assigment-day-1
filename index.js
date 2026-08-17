@@ -29,7 +29,7 @@ console.log(`My name is ${emmanuels_name} ${emmanuels_surname}, a fun thing abou
 // Chidiebeleze Ezenwile 
 let myfirstname = "Chidiebeleze";
 let mylastname = "Ezenwile";
-let myfullname = `My name is ${myfirstname} ${mylastname}`;
+let myfullnames = `My names are ${myfirstname} ${mylastname}`;
 
 //Fun thing about myself 
 let FunThing = "I love playing video games"
