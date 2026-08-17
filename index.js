@@ -6,7 +6,7 @@
 3. your favorite programming language - A string indicating your preferred programming language
 */
 
-// Alozie bright
+// Innocent Ibeto
 
 // Esther
 
@@ -39,3 +39,15 @@ let Language = "Python Programming Language"
 
 let fullsentence = `My name is ${myfirstname} ${mylastname}, a fun thing about me is ${FunThing}. My favorite programming language is ${Language}`;
 console.log(fullsentence)
+let FirstName  = "Innocent";
+
+let LastName  = "Ibeto";
+
+let FullName = FirstName + " " + LastName;
+
+const FunThingAboutMe = `Wagwan class, i am ${FullName}, and one fun thing about me is I AM BATMAN!, Shhh don't tell anyone`
+
+let FavLanguage = "Ruby on Rails"
+
+console.log(FunThingAboutMe);
+console.log(FavLanguage);
