@@ -25,3 +25,10 @@ let e_fun_thing = 'I love art'
 let fav_prog_lang = 'C'
 
 console.log(`My name is ${emmanuels_name} ${emmanuels_surname}, a fun thing about me is that ${e_fun_thing}, and my favourite programming language is ${fav_prog_lang}.`)
+
+//Chidera Nweke
+let dera_name = "Chidera Nweke"
+let dera_fun_thing = "I love to play chess"
+let dera_fav_prog_lang = "Python"
+
+console.log(`My name is ${dera_name}, A cool thing about me is that ${dera_fun_thing}, and my favourite programming language is ${dera_fav_prog_lang}.`)
