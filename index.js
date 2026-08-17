@@ -25,6 +25,20 @@ let e_fun_thing = 'I love art'
 let fav_prog_lang = 'C'
 
 console.log(`My name is ${emmanuels_name} ${emmanuels_surname}, a fun thing about me is that ${e_fun_thing}, and my favourite programming language is ${fav_prog_lang}.`)
+
+// Chidiebeleze Ezenwile 
+let myfirstname = "Chidiebeleze";
+let mylastname = "Ezenwile";
+let myfullname = `My name is ${myfirstname} ${mylastname}`;
+
+//Fun thing about myself 
+let FunThing = "I love playing video games"
+
+//Favorite programming language
+let Language = "Python Programming Language"
+
+let fullsentence = `My name is ${myfirstname} ${mylastname}, a fun thing about me is ${FunThing}. My favorite programming language is ${Language}`;
+console.log(fullsentence)
 let FirstName  = "Innocent";
 
 let LastName  = "Ibeto";
