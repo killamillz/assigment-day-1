@@ -53,7 +53,13 @@ console.log(FunThingAboutMe);
 console.log(FavLanguage);
 
 
+//Peace Ngozichukwuka
+let FirstName = "Peace";
+let LastName ="Ngozichukwuka";
+let Fun = "Watching crime shows";
+let FavLanguage = "Javascript";
 
+console.log(`${FirstName} ${LastName} ${Fun} ${FavLanguage}`);
 
 
 
