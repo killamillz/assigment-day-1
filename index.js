@@ -32,4 +32,3 @@ let _name =  "Jane_Orji"
 let myString = "one fun time about me is I like good food"
 let myString2 = "my fav programming language is none"
 
-gi
