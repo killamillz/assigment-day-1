@@ -10,22 +10,6 @@
 
 // Esther
 
-
-// Emmanuel Njoku
-let emmanuels_name = 'Emmanuel'
-let emmanuels_surname = 'Njoku'
-
-e_full_name = `${emmanuels_name} ${emmanuels_surname}`
-console.log(e_full_name)
-
-//Fun thing about Emmanuel
-let e_fun_thing = 'I love art'
-
-//Favourite programming language
-let fav_prog_lang = 'C'
-
-console.log(`My name is ${emmanuels_name} ${emmanuels_surname}, a fun thing about me is that ${e_fun_thing}, and my favourite programming language is ${fav_prog_lang}.`)
-
 //Chidera Nweke
 let dera_name = "Chidera Nweke"
 let dera_fun_thing = "I love to play chess"
