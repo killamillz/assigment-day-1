@@ -9,3 +9,7 @@
 // Alozie bright
 
 // Esther
+
+console.log("Ireoluwa Adeoluwa");
+console.log("I like watching DC animated series.");
+console.log("My favorite programming language is JavaScript.");
