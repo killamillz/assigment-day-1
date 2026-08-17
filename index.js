@@ -9,3 +9,10 @@
 // Alozie bright
 
 // Esther
+
+let firstName = "Kanyinsola";
+let lastName = "Oladeinde";
+
+console.log(firstName + " " + lastName);
+console.log("I like to laugh");
+console.log("I don't have a favorite programming language");
