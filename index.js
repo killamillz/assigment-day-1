@@ -32,10 +32,9 @@ let mylastname = "Ezenwile";
 let myfullname = `My name is ${myfirstname} ${mylastname}`;
 
 //Fun thing about myself 
-let FunThing = "I love playing video games"
-
+let FunThing = "I love playing video games";
 //Favorite programming language
-let Language = "Python Programming Language"
+let Language = "Python Programming Language";
 
 let fullsentence = `My name is ${myfirstname} ${mylastname}, a fun thing about me is ${FunThing}. My favorite programming language is ${Language}`;
 console.log(fullsentence)
