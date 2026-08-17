@@ -12,7 +12,9 @@
 
 let firstName = "Ireoluwa";
 let lastName = "Adeoluwa";
+let funFact = "I like watching DC animated series.";
+let favoriteLanguage = "My favorite programming language is JavaScript.";
 
 console.log(firstName + " " + lastName);
-console.log("I like watching DC animated series.");
-console.log("My favorite programming language is JavaScript.");
+console.log(funFact);
+console.log(favoriteLanguage);
