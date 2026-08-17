@@ -9,3 +9,18 @@
 // Alozie bright
 
 // Esther
+
+//Eronini Kelechi
+let firstName = 'Kelechi'
+let lastName = 'Eronini'
+
+let funThingAboutMe = "I love to eat. I'm a foodie."
+
+let favouriteLanguage = 'My preferred programming language is Javascript.'
+
+console.log(firstName + ' ' + lastName)
+console.log(funThingAboutMe)
+console.log(favouriteLanguage)
+
+console.log('My name is ' + firstName + ' ' + lastName + ' ' + funThingAboutMe + ' ' + favouriteLanguage)
+
