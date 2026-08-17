@@ -1,11 +1,33 @@
-// Clone repo and open
-//  In the index.js file, console.log
-/* 
-1. your name - make your name and surname a variable then display both of them on the terminal
-2. one fun thing about yourself - A short string about yourself 
-3. your favorite programming language - A string indicating your preferred programming language
-*/
+// Name variables
+const firstName = "Adetola";
+const lastName = "Oluwapelumi";
 
-// Alozie bright
+// What I love doing
+const passion1 = "coding";
+const passion2 = "solving problems";
+const passion3 = "building applications";
 
-// Esther
+// Display name on terminal using concatenation
+console.log("My name is " + firstName + " " + lastName);
+
+// Display what I love doing using concatenation
+console.log("I love " + passion1 + ", " + passion2 + ", and " + passion3);
+
+// Display separator
+console.log("================================");
+
+// JavaScript Datatypes
+console.log("<strong>JavaScript Datatypes:</strong>");
+console.log("<strong>1. String</strong> - Text data");
+console.log("<strong>2. Number</strong> - Integer and floating-point numbers");
+console.log("<strong>3. BigInt</strong> - Very large integers");
+console.log("<strong>4. Boolean</strong> - true or false");
+console.log("<strong>5. Undefined</strong> - Variable declared but not assigned");
+console.log("<strong>6. Null</strong> - No value");
+console.log("<strong>7. Symbol</strong> - Unique identifier");
+console.log("<strong>8. Object</strong> - Complex data structure");
+
+// Additional information
+console.log("================================");
+console.log("Primitive Types: String, Number, BigInt, Boolean, Undefined, Null, Symbol");
+console.log("Non-Primitive Type: Object (includes arrays, functions, etc.)");
