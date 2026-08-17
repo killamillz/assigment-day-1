@@ -10,6 +10,9 @@
 
 // Esther
 
-console.log("Ireoluwa Adeoluwa");
+let firstName = "Ireoluwa";
+let lastName = "Adeoluwa";
+
+console.log(firstName + " " + lastName);
 console.log("I like watching DC animated series.");
 console.log("My favorite programming language is JavaScript.");
