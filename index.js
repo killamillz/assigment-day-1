@@ -2,6 +2,7 @@
 //  In the index.js file, console.log
 /* 
 1. your name - make your name and surname a variable then display both of them on the terminal
+
 2. one fun thing about yourself - A short string about yourself 
 3. your favorite programming language - A string indicating your preferred programming language
 */
@@ -9,3 +10,15 @@
 // Alozie bright
 
 // Esther
+
+// solution
+let name = "Bibian";
+let surname = "Eze";
+console.log(name + " " + surname);
+
+let funThing = "I LOVE TO WORK OUT";
+console.log(funThing);
+
+
+let favoriteLanguage = "Javascript";
+console.log(favoriteLanguage);
