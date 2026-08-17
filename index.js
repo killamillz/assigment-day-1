@@ -25,3 +25,14 @@ let e_fun_thing = 'I love art'
 let fav_prog_lang = 'C'
 
 console.log(`My name is ${emmanuels_name} ${emmanuels_surname}, a fun thing about me is that ${e_fun_thing}, and my favourite programming language is ${fav_prog_lang}.`)
+
+
+// Oluwapelumi Fayomi
+let myFirstName = "Oluwapelumi";
+let myLastName= "Fayomi"
+let myFunnyThing = "I watch 50cents productions";
+let myProgramLang = "SQL";
+
+console.log(myFirstName, " ",myLastName);
+console.log(myFunnyThing);
+console.log(myProgramLang);
