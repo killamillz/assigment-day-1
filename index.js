@@ -10,18 +10,18 @@
 
 // Esther
 
-
 // Emmanuel Njoku
-let emmanuels_name = 'Emmanuel'
-let emmanuels_surname = 'Njoku'
+let pauls_name = "Paul";
+let pauls_surname = "Bassey";
 
-e_full_name = `${emmanuels_name} ${emmanuels_surname}`
-console.log(e_full_name)
+p_full_name = `${pauls_name} ${pauls_surname}`;
+console.log(p_full_name);
 
-//Fun thing about Emmanuel
-let e_fun_thing = 'I love art'
+let p_fun_thing = "I love FC26";
 
 //Favourite programming language
-let fav_prog_lang = 'C'
+let fav_prog_lang = "Golang";
 
-console.log(`My name is ${emmanuels_name} ${emmanuels_surname}, a fun thing about me is that ${e_fun_thing}, and my favourite programming language is ${fav_prog_lang}.`)
+console.log(
+  `My name is ${pauls_name} ${pauls_surname}, a fun thing about me is that ${p_fun_thing}, and my favourite programming language is ${fav_prog_lang}.`,
+);
