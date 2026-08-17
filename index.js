@@ -25,3 +25,11 @@ let e_fun_thing = 'I love art'
 let fav_prog_lang = 'C'
 
 console.log(`My name is ${emmanuels_name} ${emmanuels_surname}, a fun thing about me is that ${e_fun_thing}, and my favourite programming language is ${fav_prog_lang}.`)
+
+//Jane Orji
+console.log ("Hello World")
+let _name =  "Jane_Orji"
+let myString = "one fun time about me is I like good food"
+let myString2 = "my fav programming language is none"
+
+gi
