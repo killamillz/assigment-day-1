@@ -12,5 +12,5 @@
 let name = "Esther";
 let surname = "Idowu";
 console.log(name + " " + surname);
-console.log("I love to dance!");
+console.log("I love to dance!"); 
 console.log("Python is my favorite programming language.");
