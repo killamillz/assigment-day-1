@@ -11,6 +11,25 @@
 // Esther
 
 
+// ===============================================================================
+// Folahanmi Ojokuku
+
+let firstName = "Folahanmi"; // My first name
+let surname = "Ojokuku"; // My surname
+
+let funThing = "I enjoy football only when Chelsea is playing well"
+
+let favoriteLanguage = "TypeScript"
+
+let introduction = `My name is ${firstName} ${surname}`;
+
+console.log('==============================================================')
+
+console.log("1. " + introduction);
+console.log("2. " + funThing);
+console.log("3. My favorite language is" + favoriteLanguage);
+console.log('==============================================================')
+// ===============================================================================
 // Emmanuel Njoku
 let emmanuels_name = 'Emmanuel'
 let emmanuels_surname = 'Njoku'
