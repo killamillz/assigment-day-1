@@ -94,28 +94,3 @@ bodyContainer.addEventListener('change', e => {
         }
     }
 })
-
-
-// search todos
-filterTodo = (terms) => {
-    const listArray = Array.from(list.children)
-    listArray
-        .filter(todo => !todo.textContent.toLowerCase().includes(terms))
-
-        .forEach(todo => todo.classList.add('filtered'));
-
-
-    listArray
-        .filter(todo => todo.textContent.toLowerCase().includes(terms))
-
-        .forEach(todo => todo.classList.remove('filtered'));
-}
-
-
-const search = document.querySelector('.search input');
-if (search) {
-    search.addEventListener('keyup', () => {
-        const terms = search.value.toLowerCase().trim()
-        filterTodo(terms)
-    })
-}
