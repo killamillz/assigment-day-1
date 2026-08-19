@@ -12,15 +12,16 @@ body {
 }
 
 .body-container {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 400px;
+    width: 500px;
+    padding: 1rem 0;
 }
 
-.container{
+.container {
     width: 100%;
 }
 
@@ -30,6 +31,15 @@ body {
     color: #f8f9fa;
     margin-bottom: 1rem;
     font-size: 2rem;
+}
+
+.section-label {
+    color: #f8f9fa;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+    margin: 0 0 0.5rem;
 }
 
 input[type=text],
@@ -54,6 +64,36 @@ input[type=text]:focus {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.add-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.time-input,
+.time-input:focus {
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    height: 60px;
+    border-radius: 12px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    outline: none;
+    flex: 0 0 auto;
+    width: 170px;
+}
+
+.time-input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.todo-time {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
 .btn {
     background: #423a6f !important;
     color: #fff;
@@ -71,23 +111,47 @@ input[type=text]:focus {
     background: #4e4585 !important;
 }
 
-.todos {
+.todos,
+.completed-todos {
     list-style: none;
-    margin: 0;
+    margin: 0 0 1.5rem;
     padding: 0;
     width: 100%;
 }
 
-.todos li {
+.todos li,
+.completed-todos li {
     background: #423a6f;
     color: #fff;
     height: 70px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 0.75rem;
     padding: 0.5rem 1rem;
     margin-bottom: 0.5rem;
     border-radius: 0.375rem;
+}
+
+.todos li span,
+.completed-todos li span {
+    flex: 1;
+}
+
+.complete-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #f8f9fa;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.completed-todos li {
+    background: rgba(66, 58, 111, 0.5);
+}
+
+.completed-todos li span {
+    text-decoration: line-through;
+    opacity: 0.6;
 }
 
 .delete {
