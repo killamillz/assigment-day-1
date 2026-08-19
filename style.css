@@ -80,7 +80,7 @@ input[type=text]:focus {
     font-size: 1rem;
     outline: none;
     flex: 0 0 auto;
-    width: 170px;
+    width: 150px;
 }
 
 .time-input::-webkit-calendar-picker-indicator {
@@ -185,4 +185,14 @@ i.delete {
 
 li.todo-item {
     width: 100%;
+}
+
+.time-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+span.todo-time{
+    font-size: 17px;
 }

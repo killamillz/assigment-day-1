@@ -23,7 +23,17 @@ const formatTime = (time) => {
 
 const generateTodo = (todos, time) => {
     const timeHtml = time ? `<span class="todo-time">${formatTime(time)}</span>` : '';
-    const html = `<li class="todo-item"><input type="checkbox" class="complete-checkbox" /><span>${todos}</span>${timeHtml}<i class="delete"><iconify-icon icon="codicon:trash"></iconify-icon></i></li>`
+    const html = `    <li class="todo-item">
+      <input type="checkbox" class="complete-checkbox" />
+
+      <span>${todos}</span>
+
+      <div class="time-container">
+        ${timeHtml}
+
+        <i class="delete"><iconify-icon icon="codicon:trash"></iconify-icon></i>
+      </div>
+    </li>`
 
     list.innerHTML += html;
 }
