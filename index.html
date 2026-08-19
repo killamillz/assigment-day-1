@@ -4,192 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Todo List</title>
-<style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  .app {
-    background: #fff;
-    width: 100%;
-    max-width: 420px;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    padding: 30px;
-  }
-
-  h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 26px;
-  }
-
-  .input-row {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-
-  #taskInput {
-    flex: 1;
-    padding: 12px 14px;
-    border: 2px solid #eee;
-    border-radius: 8px;
-    font-size: 15px;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-
-  #taskInput:focus {
-    border-color: #764ba2;
-  }
-
-  #addBtn {
-    background: #764ba2;
-    color: #fff;
-    border: none;
-    padding: 0 18px;
-    border-radius: 8px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  #addBtn:hover {
-    background: #5f3a85;
-  }
-
-  .filters {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
-  }
-
-  .filter-btn {
-    flex: 1;
-    padding: 8px;
-    border: none;
-    background: #f2f2f2;
-    color: #666;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 13px;
-    transition: all 0.2s;
-  }
-
-  .filter-btn.active {
-    background: #764ba2;
-    color: #fff;
-  }
-
-  ul#taskList {
-    list-style: none;
-    max-height: 320px;
-    overflow-y: auto;
-  }
-
-  ul#taskList li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 10px;
-    border-bottom: 1px solid #f0f0f0;
-    animation: fadeIn 0.25s ease;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-6px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  ul#taskList li input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: #764ba2;
-    cursor: pointer;
-  }
-
-  ul#taskList li span {
-    flex: 1;
-    font-size: 15px;
-    color: #333;
-    word-break: break-word;
-  }
-
-  ul#taskList li.completed span {
-    text-decoration: line-through;
-    color: #aaa;
-  }
-
-  ul#taskList li button {
-    background: none;
-    border: none;
-    color: #ccc;
-    font-size: 16px;
-    cursor: pointer;
-    transition: color 0.2s;
-  }
-
-  ul#taskList li button:hover {
-    color: #e74c3c;
-  }
-
-  .empty {
-    text-align: center;
-    color: #bbb;
-    padding: 30px 0;
-    font-size: 14px;
-  }
-
-  .footer {
-    margin-top: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-    color: #999;
-  }
-
-  .footer button {
-    background: none;
-    border: none;
-    color: #764ba2;
-    cursor: pointer;
-    font-size: 13px;
-  }
-
-  .footer button:hover {
-    text-decoration: underline;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="app">
-  <h1>My Todo List</h1>
+  <header>
+    <h1>My Todo List</h1>
+    <button id="themeBtn" title="Toggle dark mode">🌙</button>
+  </header>
+  <p class="subtitle" id="subtitle">Let's get things done.</p>
+
+  <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
 
   <div class="input-row">
-    <input type="text" id="taskInput" placeholder="Add a new task...">
-    <button id="addBtn">+</button>
+    <input type="text" id="taskInput" placeholder="Add a new task..." maxlength="200">
+    <button id="addBtn" title="Add task">+</button>
+  </div>
+
+  <div class="due-row">
+    <label for="dueInput">Complete by</label>
+    <input type="datetime-local" id="dueInput">
+    <button id="clearDueBtn" title="Clear the date">✕</button>
   </div>
 
   <div class="filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="active">Active</button>
-    <button class="filter-btn" data-filter="completed">Completed</button>
+    <button class="filter-btn active" data-filter="all">All <span class="count" data-count="all"></span></button>
+    <button class="filter-btn" data-filter="active">Active <span class="count" data-count="active"></span></button>
+    <button class="filter-btn" data-filter="completed">Done <span class="count" data-count="completed"></span></button>
   </div>
 
   <ul id="taskList"></ul>
@@ -200,98 +42,8 @@
   </div>
 </div>
 
-<script>
-let tasks = [];
-let currentFilter = 'all';
+<div id="toast"><span id="toastText"></span><button id="undoBtn">Undo</button></div>
 
-const taskInput = document.getElementById('taskInput');
-const addBtn = document.getElementById('addBtn');
-const taskList = document.getElementById('taskList');
-const itemsLeft = document.getElementById('itemsLeft');
-const clearBtn = document.getElementById('clearBtn');
-const filterBtns = document.querySelectorAll('.filter-btn');
-
-function addTask() {
-  const text = taskInput.value.trim();
-  if (text === '') {
-    return;
-  }
-  else{
-      tasks.push({ id: Date.now(), text: text, completed: false });
-      taskInput.value = '';
-      displayTask();
-    }
-}
-
-function toggleTask(id) {
-  tasks = tasks.map(t => t.id === id ? { ...t, completed: !t.completed } : t);
-  displayTask();
-}
-
-function deleteTask(id) {
-  tasks = tasks.filter(t => t.id !== id);
-  displayTask();
-}
-
-function clearCompleted() {
-  tasks = tasks.filter(t => !t.completed);
-  displayTask();
-}
-
-function displayTask() {
-  taskList.innerHTML = '';
-
-  let filtered = tasks;
-  if (currentFilter === 'active') filtered = tasks.filter(t => !t.completed);
-  if (currentFilter === 'completed') filtered = tasks.filter(t => t.completed);
-
-  if (filtered.length === 0) {
-    taskList.innerHTML = '<div class="empty">No tasks here</div>';
-  } else {
-    filtered.forEach(task => {
-      const li = document.createElement('li');
-      li.className = task.completed ? 'completed' : '';
-
-      const checkbox = document.createElement('input');
-      checkbox.type = 'checkbox';
-      checkbox.checked = task.completed;
-      checkbox.addEventListener('change', () => toggleTask(task.id));
-
-      const span = document.createElement('span');
-      span.textContent = task.text;
-
-      const delBtn = document.createElement('button');
-      delBtn.textContent = '✕';
-      delBtn.addEventListener('click', () => deleteTask(task.id));
-
-      li.appendChild(checkbox);
-      li.appendChild(span);
-      li.appendChild(delBtn);
-      taskList.appendChild(li);
-    });
-  }
-
-  const activeCount = tasks.filter(t => !t.completed).length;
-  itemsLeft.textContent = `${activeCount} item${activeCount === 1 ? '' : 's'} left`;
-}
-
-addBtn.addEventListener('click', addTask);
-taskInput.addEventListener('keypress', e => {
-  if (e.key === 'Enter') addTask();
-});
-clearBtn.addEventListener('click', clearCompleted);
-
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    currentFilter = btn.dataset.filter;
-    displayTask();
-  });
-});
-
-displayTask();
-</script>
-
+<script src="app.js"></script>
 </body>
 </html>
