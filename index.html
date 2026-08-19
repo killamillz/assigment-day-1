@@ -1,0 +1,122 @@
+<!--/Group2 - 
+Chidera Nweke, 
+Esther Idowu, 
+Paul Bassey, 
+Oluwapelumi Fayomi, 
+Oluwatobiloba Taiwo, 
+Jane Orji -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic page settings and the Google Sans Flex font. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Your To Do</title>
+  </head>
+  <body>
+    <!-- Main todo card containing the task list and daily information. -->
+    <main class="app-shell">
+      <section class="todo-card" aria-labelledby="pageTitle">
+        <!-- The date is filled in automatically by JavaScript. -->
+        <time class="date-badge" id="dateBadge" datetime=""></time>
+        <h1 id="pageTitle">To-Do List</h1>
+        <!-- This button opens the task creation form. -->
+        <div class="task-form">
+          <span class="task-placeholder">Add new task</span>
+          <button
+            class="add-button"
+            id="openModalButton"
+            type="button"
+            aria-label="Create a new task"
+          >
+            +
+          </button>
+        </div>
+        <!-- JavaScript creates task rows inside this container. -->
+        <div class="task-list" id="taskList" aria-live="polite"></div>
+        <!-- Shown when the task list is empty. -->
+        <div class="empty-state" id="emptyState" hidden>
+          <p>No tasks yet. Add one above.</p>
+        </div>
+        <p class="remaining">
+          Your remaining todos : <strong id="activeCount">0</strong>
+        </p>
+        <!-- JavaScript chooses a new motivational quote on each refresh. -->
+        <p class="daily-quote" id="dailyQuote" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <!-- Hidden overlay containing the form for creating a task. -->
+    <div class="modal-backdrop" id="modalBackdrop" hidden>
+      <section
+        class="task-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <!-- Closes the modal without creating a task. -->
+        <button
+          class="close-modal"
+          id="closeModalButton"
+          type="button"
+          aria-label="Close task form"
+        >
+        
+        </button>
+        <p class="modal-kicker">PLAN YOUR NEXT STEP</p>
+        <h2 id="modalTitle">Create a task</h2>
+        <!-- Task details collected before the task is added to the list. -->
+        <form id="taskForm">
+          <label for="taskInput">Task name</label>
+          <input
+            id="taskInput"
+            type="text"
+            placeholder="e.g. Revise biology notes"
+            maxlength="90"
+            autocomplete="off"
+            required
+          />
+          <div class="form-row">
+            <div>
+              <label for="subjectInput">Subject</label>
+              <input
+                id="subjectInput"
+                type="text"
+                placeholder="e.g. Biology"
+                maxlength="30"
+              />
+            </div>
+            <div>
+              <label for="startTimeInput">Start time</label>
+              <input id="startTimeInput" type="time" />
+            </div>
+            <div>
+              <label for="dueDateInput">Due date</label>
+              <input id="dueDateInput" type="date" />
+            </div>
+            <div>
+              <label for="dueTimeInput">Due time</label>
+              <input id="dueTimeInput" type="time" />
+            </div>
+          </div>
+          <label for="priorityInput">Priority</label>
+          <select id="priorityInput">
+            <option value="Low">Low</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="High">High</option>
+          </select>
+          <button class="save-task-button" type="submit">Add task</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
