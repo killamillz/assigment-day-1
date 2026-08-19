@@ -6,7 +6,9 @@ body {
     background: #352f5b !important;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .body-container {
@@ -15,6 +17,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 400px;
+}
+
+.container{
+    width: 100%;
 }
 
 
@@ -68,6 +75,7 @@ input[type=text]:focus {
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .todos li {
@@ -109,4 +117,8 @@ li.filtered {
 i.delete {
     color: red;
     font-size: 24px;
+}
+
+li.todo-item {
+    width: 100%;
 }
