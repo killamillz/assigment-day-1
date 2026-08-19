@@ -8,7 +8,7 @@
 // Emmanuel Njoku
 
 const addTodos = document.querySelector('.add-btn');
-const aa = document.querySelector('.add')
+const form = document.querySelector('.add')
 const list = document.querySelector('.todos');
 const completedList = document.querySelector('.completed-todos');
 const bodyContainer = document.querySelector('.body-container');
@@ -41,28 +41,29 @@ const generateTodo = (todos, time) => {
 
 // add todo
 addTodos.addEventListener('click', () => {
-    const todos = aa.add.value.trim();
-    const time = aa['add-time'].value;
+    const todos = form.add.value.trim();
+    const time = form['add-time'].value;
     if (todos !== '') {
         console.log(todos)
 
         generateTodo(todos, time);
     } else { }
 
-    aa.reset();
+    form.reset();
 
 })
 
-aa.addEventListener('submit', e => {
+//submit with enter key
+form.addEventListener('submit', e => {
     e.preventDefault()
 
-    const todos = aa.add.value;
-    const time = aa['add-time'].value;
+    const todos = form.add.value;
+    const time = form['add-time'].value;
     console.log(todos)
 
     generateTodo(todos, time);
 
-    aa.reset();
+    form.reset();
 })
 
 
