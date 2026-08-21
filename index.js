@@ -67,3 +67,20 @@ let FavLanguage = "Ruby on Rails"
 
 console.log(FunThingAboutMe);
 console.log(FavLanguage);
+
+// Oluwatobiloba Taiwo
+// Your name
+let firstName = "Oluwatobiloba";
+let lastName = "Taiwo";
+
+console.log(firstName, lastName);
+
+// One fun thing about yourself
+let funFact = "I enjoy playing video games and exploring technology.";
+
+console.log(funFact);
+
+// Favorite programming language
+let favoriteLanguage = "JavaScript";
+
+console.log(favoriteLanguage);
