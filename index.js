@@ -10,6 +10,21 @@
 
 // Esther
 
+//Kanyinsola Oladeinde
+let firstName = "Kanyinsola";
+let lastName = "Oladeinde";
+
+console.log(firstName + " " + lastName);
+console.log("I like to laugh"); // fun thing about myself
+console.log("I don't have a favorite programming language"); //my favorite programming language 
+
+let firstName = "Kanyinsola";
+let lastName = "Oladeinde";
+
+console.log(firstName + " " + lastName);
+console.log("I like to laugh");
+console.log("I don't have a favorite programming language");
+
 
 // Emmanuel Njoku
 let emmanuels_name = 'Emmanuel'
